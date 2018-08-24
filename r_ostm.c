@@ -1,15 +1,12 @@
 /******************************************************************************
-
 * file Name : r_ostm.c
-
 * version   : 0.1
-
 * Argument      : andy
-
 * data  : 2018/8/24
-
 * describe: os timer
-
+*
+* Unit Name 	Clock for the Unit 	Supply Clock Name
+  OSTM0 	PCLK 			CPUCLK2
 ******************************************************************************/
 #include	<string.h>
 #include 	"r_typedefs.h"
@@ -19,20 +16,13 @@
 #include    	"rlin3_api.h"
 uint32_t OSTM0_Tick=0;
 const uint32_t OSTM_1MS =40000; //40000 1ms , 4000 10ms 
-
 /******************************************************************************
-
 * Function Name : void OSTM0_Init( uint32_t )
-
 * Description   : This function initializes the  os clock.
-
 * Argument      : value
-
 * Return Value  : none
-
 ******************************************************************************/
-void OSTM0_Init(uint32_t value)
-{
+void OSTM0_Init(uint32_t value){
 	/*OSTMn Control Register
 	 *b7:b2 - Reserved set to 0
 	 b1	-Specifies the operating mode for the counter
